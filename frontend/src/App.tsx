@@ -8,12 +8,18 @@ import Contato from "./pages/Contato";
 function App() {
   return (
     <main className="min-h-screen bg-slate-300">
-      <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to="/produtos">Produtos</Link>
-        <Link to="/contato">Contato</Link>
+      <nav className="flex gap-6 bg-blue-900 p-4 text-white">
+        <Link to={"/"} className="hover:underline">
+          Home
+        </Link>
+        <Link to="/produtos" className="hover:underline">
+          Produtos
+        </Link>
+        <Link to="/contato" className="hover:underline">
+          Contato
+        </Link>
       </nav>
-      <div>
+      <div className="p-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/produtos" element={<Produtos />} />
