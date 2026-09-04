@@ -1,12 +1,14 @@
 import express, { type Express, type Request, type Response } from 'express';
+import cors from "cors";
 
 const app: Express = express();
+app.use(cors());
 const port = 3000;
 
 const contatos = [
-  {id: 1, nome: "Cordeiro", email: "cordeiro@teste.com"},
-  {id: 2, nome: "Lobo", email: "lobo@teste.com"}, 
-  {id: 3, nome: "Chapelzin", email: "vermelho@teste.com"}
+  {id: 1, name: "Cordeiro", email: "cordeiro@teste.com"},
+  {id: 2, name: "Lobo", email: "lobo@teste.com"}, 
+  {id: 3, name: "Chapelzin", email: "vermelho@teste.com"}
 ];
 
 app.get('/', (req: Request, res: Response) => {
